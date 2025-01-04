@@ -43,8 +43,8 @@ fetch('db-a.csv')
             let box = document.createElement('div');
             box.className = 'box';
             box.innerHTML = `<h1><ruby><rb>${word}</rb><rp>(</rp><rt>${pronunciation}</rt><rp>)</rp></ruby></h1>
-                              <p><i>Etymology: ${etymology}</i></p><br>
-                              <p>${enDefinition} | ${zhDefinition}</p><br>
+                              <p><i>Etymology: ${etymology}</i></p>
+                              <p>${enDefinition} | ${zhDefinition}</p>
                               <p><b>Relevant phrases: </b>${relevantPhrases}</p>`;
 
             content.appendChild(box);
