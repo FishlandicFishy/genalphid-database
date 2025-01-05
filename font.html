@@ -7,7 +7,12 @@
 <style>
     @font-face {
       font-family: "g-a sans";
-      src: url(g-a-sans.woff);
+      src:
+        url("g-a-sans.ttf") format("truetype"),
+        url("g-a-sans.woff") format("woff");
+      letter-spacing: normal;
+      font-feature-settings: "rlig" 1;
+      font-variant-ligatures: normal;
     }
     .box {
         width: 30%;
@@ -16,14 +21,6 @@
         border: 1px solid black;
         text-align: center;
         display: inline-block;
-    }
-    code {
-      white-space: pre-line;
-      font-family: monospace;
-      color: crimson;
-      background-color: #f1f1f1;
-      padding: 2px;
-      font-size: 105%;
     }
     * {
         font-family: "g-a sans", "Inter", "Noto Sans CJK KR", "Chocolate Classical Sans", "Plangothic P1", "Plangothic P2", "Jigmo", "Jigmo2", "Jigmo3", sans-serif !important;
