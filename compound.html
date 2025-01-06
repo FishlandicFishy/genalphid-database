@@ -22,17 +22,15 @@ fetch('db-b.csv')
         data.forEach(row => {
             let pronunciation = row[0];
             let word = row[1].includes('/') ? row[0] : row[1];
-            let relevantPhrases = row[2];
-            let enDefinition = row[3];
-            let zhDefinition = row[4];
-            let etymology = row[5];
+            let enDefinition = row[2];
+            let zhDefinition = row[3];
+            let etymology = row[4];
 
             let box = document.createElement('div');
             box.className = 'box';
             box.innerHTML = `<h1><ruby><rb>${word}</rb><rp>(</rp><rt>${pronunciation}</rt><rp>)</rp></ruby></h1>
                               <p><i>Etymology: ${etymology}</i></p>
-                              <p>${enDefinition} | ${zhDefinition}</p>
-                              <p><b>Relevant phrases: </b>${relevantPhrases}</p>`;
+                              <p>${enDefinition} | ${zhDefinition}</p>`;
 
             content.appendChild(box);
         });
