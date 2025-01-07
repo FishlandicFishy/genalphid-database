@@ -20,7 +20,8 @@
 <div id="content"></div>
 
 <script>
-fetch('db-b.csv')
+const unixTime = new Date().getTime();
+fetch(`db-b.csv?cb=${unixTime}`)
     .then(response => response.text())
     .then(text => {
         let data = text.split('\n').map(line => line.replace(/"/g, '').split(','));
