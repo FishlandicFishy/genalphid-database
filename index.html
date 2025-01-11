@@ -21,7 +21,7 @@
 
 <script>
 const unixTime = new Date().getTime();
-fetch(`db-b.csv?cb=${unixTime}`)
+fetch(`db-a.csv?cb=${unixTime}`)
     .then(response => response.text())
     .then(text => {
         let data = text.split('\n').map(line => line.replace(/"/g, '').split(','));
